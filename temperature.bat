@@ -1,0 +1,2 @@
+py temperature.py
+pause

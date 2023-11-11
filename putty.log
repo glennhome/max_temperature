@@ -1,0 +1,1211 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2022.06.13 15:01:15 =~=~=~=~=~=~=~=~=~=~=~=
+login as: opr
+Using keyboard-interactive authentication.
+Password: 
+Last login: Mon Jun 13 14:17:30 2022 from 10.68.3.43
+Oracle Corporation      SunOS 5.10      Generic Patch   January 2005
+[H[2J[7m    sol10u11-x86  Oper. Daily Chk M8-T8 / GD ¤Á´«¾Þ§@§@·~                                    
+[m
+
+
+[7m100[m  - Opr. Daily Chk M8-T8 ¾Þ§@§@·~
+
+[7m200[m  - GD - TWD2002 and TWD2020 ¤Á´«¾Þ§@§@·~
+
+
+
+
+
+[7m999[m - µn¥XLogout
+
+[7m                              
+
+
+«e¤@¨B°Ê§@¡G 
+[mSelection: 100.
+[H[2J[7m    sol10u11-x86  Oper. Daily Chk M8-T8 / GD ¤Á´«¾Þ§@§@·~                                    
+[m
+
+
+[7m100[m  - Opr. Daily Chk M8-T8 ¾Þ§@§@·~
+
+[7m200[m  - GD - TWD2002 and TWD2020 ¤Á´«¾Þ§@§@·~
+
+
+
+
+
+[7m999[m - µn¥XLogout
+
+[7m   Invalid option selected.   
+
+
+«e¤@¨B°Ê§@¡G 
+[mSelection: 100
+½T©w­n¶i¦æ¶Ü? (y/n)? [y] 
+[H[2J[7m    sol10u11-x86   100 - Opr. Daily Chk M8-T8 ¾Þ§@§@·~                                    
+[m
+
+[7mOper. Daily Chk M8-T8 / GD ¤Á´«¾Þ§@§@·~ [m
+
+[7m110[m  - XC - M8-8 (iLom) - Check H/W Status.        [7m120[m  - XC - T8-1 (iLom) - Check H/W Status.
+
+[7m130[m  - LT - T8-1 (iLom) - Check H/W Status.        [7m140[m  - For Future.
+
+
+
+
+
+[7m999[m - ¤W¤@­¶
+
+[7m                                    
+
+
+«e¤@¨B°Ê§@¡G
+[mSelection: 110
+½T©w­n¶i¦æ¶Ü? (y/n)? [y] 
+
+------------------------------- Start --------------------
+###########################################
+110 - XC - M8-8 (iLom) - Check H/W Status. 
+###########################################
+spawn ssh oper@192.168.3.2
+M8-8-XC-SP (iLom) [512G]
+Chang Xing - Rack: E  / [SN: AK00427256 ] 
+Password: 
+
+Oracle(R) Integrated Lights Out Manager
+
+Version 5.0.2.2 r141861
+
+Copyright (c) 2021, Oracle and/or its affiliates. All rights reserved.
+
+M8-8-XC-SP (iLom) [512G]
+Chang Xing - Rack: E  / [SN: AK00427256 ] 
+
+
+Warning: HTTPS certificate is set to factory default.
+
+Hostname: M8-8-SP (Active SP)
+
+-> show /SP hostname current_hostname
+
+ /SP
+    Properties:
+        hostname = M8-8-SP
+        current_hostname = M8-8-SP
+
+
+-> show /SP/clock
+
+ /SP/clock
+    Targets:
+
+    Properties:
+        datetime = Mon Jun 13 15:01:38 2022
+        timezone = CST (Asia/Taipei)
+        uptime = 137 days, 22:29:57
+        usentpserver = enabled
+
+    Commands:
+        cd
+        set
+        show
+
+-> show -t -l 2 / keyswitch_state
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+/HOST0             | keyswitch_state       | Normal
+
+-> show /HOST/diag
+
+ /HOST0/diag
+    Targets:
+
+    Properties:
+        default_level = off
+        default_verbosity = none
+        error_level = off
+        error_verbosity = none
+        hw_change_level = min
+        hw_change_verbosity = none
+
+    Commands:
+        cd
+        set
+        show
+
+-> show /HOST status
+
+ /HOST0
+    Properties:
+        status = Solaris running
+
+
+-> show /HOST status_detail
+
+ /HOST0
+    Properties:
+        status_detail = 20220208 17:42:02: Host status updated
+
+
+-> show -level all -output table /SYS type==Temperature value
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+/SYS/CMIOU0/CM/    | value                 | 32.500 degree C
+ CMP/BOB00/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU0/CM/    | value                 | 32.750 degree C
+ CMP/BOB00/T_B     |                       | 
+/SYS/CMIOU0/CM/    | value                 | 32.500 degree C
+ CMP/BOB01/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU0/CM/    | value                 | 34.750 degree C
+ CMP/BOB01/T_B     |                       | 
+/SYS/CMIOU0/CM/    | value                 | 33.000 degree C
+ CMP/BOB10/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU0/CM/    | value                 | 32.000 degree C
+ CMP/BOB10/T_B     |                       | 
+/SYS/CMIOU0/CM/    | value                 | 32.000 degree C
+ CMP/BOB11/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU0/CM/    | value                 | 34.250 degree C
+ CMP/BOB11/T_B     |                       | 
+/SYS/CMIOU0/CM/    | value                 | 32.500 degree C
+ CMP/BOB20/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU0/CM/    | value                 | 33.000 degree C
+ CMP/BOB20/T_B     |                       | 
+/SYS/CMIOU0/CM/    | value                 | 28.250 degree C
+ CMP/BOB21/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU0/CM/    | value                 | 30.500 degree C
+ CMP/BOB21/T_B     |                       | 
+/SYS/CMIOU0/CM/    | value                 | 32.500 degree C
+ CMP/BOB30/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU0/CM/    | value                 | 31.750 degree C
+ CMP/BOB30/T_B     |                       | 
+/SYS/CMIOU0/CM/    | value                 | 28.000 degree C
+ CMP/BOB31/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU0/CM/    | value                 | 32.000 degree C
+ CMP/BOB31/T_B     |                       | 
+/SYS/CMIOU0/CM/    | value                 | 44.000 degree C
+ CMP/T_INT         |                       | 
+/SYS/CMIOU0/CM/    | value                 | 21.500 degree C
+ T_AMB             |                       | 
+/SYS/CMIOU0/CM/    | value                 | 27.750 degree C
+ VDDR_MIO_OBPS/    |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU0/CM/    | value                 | 32.062 degree C
+ VDDR_OBPS0/T_INT  |                       | 
+/SYS/CMIOU0/CM/    | value                 | 31.219 degree C
+ VDDR_OBPS1/T_INT  |                       | 
+/SYS/CMIOU0/IOH/   | value                 | 45.568 degree C
+ T_INT             |                       | 
+/SYS/CMIOU0/PCIE1/ | value                 | 33.000 degree C
+ CAR/T_AMB         |                       | 
+/SYS/CMIOU0/PCIE2/ | value                 | 34.000 degree C
+ CAR/T_AMB         |                       | 
+/SYS/CMIOU0/PCIE3/ | value                 | 30.000 degree C
+ CAR/T_AMB         |                       | 
+/SYS/CMIOU0/       | value                 | 26.500 degree C
+ STBY_PWR_MGR/     |                       | 
+ TEMP              |                       | 
+/SYS/CMIOU0/T_CPU  | value                 | 36.750 degree C
+/SYS/CMIOU0/T_IN   | value                 | 21.500 degree C
+/SYS/CMIOU0/T_IOH  | value                 | 33.000 degree C
+/SYS/CMIOU0/T_OUT  | value                 | 36.000 degree C
+/SYS/CMIOU0/       | value                 | 36.750 degree C
+ VCORE_BOB_D0_OBPS |                       | 
+ /T_INT            |                       | 
+/SYS/CMIOU0/       | value                 | 40.188 degree C
+ VCORE_BOB_D1_OBPS |                       | 
+ /T_INT            |                       | 
+/SYS/CMIOU0/       | value                 | 38.625 degree C
+ VCORE_BOB_D2_OBPS |                       | 
+ /T_INT            |                       | 
+/SYS/CMIOU0/       | value                 | 33.562 degree C
+ VCORE_BOB_D3_OBPS |                       | 
+ /T_INT            |                       | 
+/SYS/CMIOU0/       | value                 | 41.938 degree C
+ VCORE_IOH_OBPS0/  |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU0/       | value                 | 42.188 degree C
+ VCORE_IOH_OBPS1/  |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU0/       | value                 | 42.500 degree C
+ VCORE_IOH_OBPS2/  |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU0/       | value                 | 41.812 degree C
+ VDDIO_IOH_OBPS/   |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU0/       | value                 | 35.812 degree C
+ VDDT_BOB_D0_OBPS/ |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU0/       | value                 | 34.375 degree C
+ VDDT_BOB_D1_OBPS/ |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU0/       | value                 | 34.250 degree C
+ VDDT_BOB_D2_OBPS/ |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU0/       | value                 | 33.375 degree C
+ VDDT_BOB_D3_OBPS/ |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU0/       | value                 | 43.750 degree C
+ VREF_IOH_OBPS/    |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU1/CM/    | value                 | 32.000 degree C
+ CMP/BOB00/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU1/CM/    | value                 | 33.500 degree C
+ CMP/BOB00/T_B     |                       | 
+/SYS/CMIOU1/CM/    | value                 | 32.500 degree C
+ CMP/BOB01/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU1/CM/    | value                 | 35.500 degree C
+ CMP/BOB01/T_B     |                       | 
+/SYS/CMIOU1/CM/    | value                 | 32.250 degree C
+ CMP/BOB10/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU1/CM/    | value                 | 32.750 degree C
+ CMP/BOB10/T_B     |                       | 
+/SYS/CMIOU1/CM/    | value                 | 32.000 degree C
+ CMP/BOB11/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU1/CM/    | value                 | 34.750 degree C
+ CMP/BOB11/T_B     |                       | 
+/SYS/CMIOU1/CM/    | value                 | 32.750 degree C
+ CMP/BOB20/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU1/CM/    | value                 | 33.000 degree C
+ CMP/BOB20/T_B     |                       | 
+/SYS/CMIOU1/CM/    | value                 | 29.250 degree C
+ CMP/BOB21/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU1/CM/    | value                 | 31.000 degree C
+ CMP/BOB21/T_B     |                       | 
+/SYS/CMIOU1/CM/    | value                 | 32.500 degree C
+ CMP/BOB30/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU1/CM/    | value                 | 32.750 degree C
+ CMP/BOB30/T_B     |                       | 
+/SYS/CMIOU1/CM/    | value                 | 30.000 degree C
+ CMP/BOB31/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU1/CM/    | value                 | 33.250 degree C
+ CMP/BOB31/T_B     |                       | 
+/SYS/CMIOU1/CM/    | value                 | 43.000 degree C
+ CMP/T_INT         |                       | 
+/SYS/CMIOU1/CM/    | value                 | 22.500 degree C
+ T_AMB             |                       | 
+/SYS/CMIOU1/CM/    | value                 | 29.656 degree C
+ VDDR_MIO_OBPS/    |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU1/CM/    | value                 | 37.125 degree C
+ VDDR_OBPS0/T_INT  |                       | 
+/SYS/CMIOU1/CM/    | value                 | 33.438 degree C
+ VDDR_OBPS1/T_INT  |                       | 
+/SYS/CMIOU1/IOH/   | value                 | 46.581 degree C
+ T_INT             |                       | 
+/SYS/CMIOU1/PCIE1/ | value                 | 33.500 degree C
+ CAR/T_AMB         |                       | 
+/SYS/CMIOU1/PCIE2/ | value                 | 33.000 degree C
+ CAR/T_AMB         |                       | 
+/SYS/CMIOU1/PCIE3/ | value                 | 29.000 degree C
+ CAR/T_AMB         |                       | 
+/SYS/CMIOU1/       | value                 | 27.750 degree C
+ STBY_PWR_MGR/     |                       | 
+ TEMP              |                       | 
+/SYS/CMIOU1/T_CPU  | value                 | 37.500 degree C
+/SYS/CMIOU1/T_IN   | value                 | 22.500 degree C
+/SYS/CMIOU1/T_IOH  | value                 | 33.500 degree C
+/SYS/CMIOU1/T_OUT  | value                 | 36.250 degree C
+/SYS/CMIOU1/       | value                 | 39.625 degree C
+ VCORE_BOB_D0_OBPS |                       | 
+ /T_INT            |                       | 
+/SYS/CMIOU1/       | value                 | 41.875 degree C
+ VCORE_BOB_D1_OBPS |                       | 
+ /T_INT            |                       | 
+/SYS/CMIOU1/       | value                 | 39.188 degree C
+ VCORE_BOB_D2_OBPS |                       | 
+ /T_INT            |                       | 
+/SYS/CMIOU1/       | value                 | 35.625 degree C
+ VCORE_BOB_D3_OBPS |                       | 
+ /T_INT            |                       | 
+/SYS/CMIOU1/       | value                 | 43.250 degree C
+ VCORE_IOH_OBPS0/  |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU1/       | value                 | 38.562 degree C
+ VCORE_IOH_OBPS1/  |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU1/       | value                 | 42.312 degree C
+ VCORE_IOH_OBPS2/  |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU1/       | value                 | 42.438 degree C
+ VDDIO_IOH_OBPS/   |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU1/       | value                 | 36.000 degree C
+ VDDT_BOB_D0_OBPS/ |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU1/       | value                 | 35.938 degree C
+ VDDT_BOB_D1_OBPS/ |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU1/       | value                 | 35.562 degree C
+ VDDT_BOB_D2_OBPS/ |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU1/       | value                 | 32.688 degree C
+ VDDT_BOB_D3_OBPS/ |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU1/       | value                 | 44.938 degree C
+ VREF_IOH_OBPS/    |                       | 
+ T_INT             |                       | 
+/SYS/FM0/T_AMB     | value                 | 20.000 degree C
+/SYS/FM1/T_AMB     | value                 | 20.000 degree C
+/SYS/FM2/T_AMB     | value                 | 20.000 degree C
+/SYS/FM3/T_AMB     | value                 | 21.000 degree C
+/SYS/FM4/T_AMB     | value                 | 21.000 degree C
+/SYS/FM5/T_AMB     | value                 | 21.000 degree C
+/SYS/FM6/T_AMB     | value                 | 21.000 degree C
+/SYS/FM7/T_AMB     | value                 | 22.000 degree C
+/SYS/PDECB0/T_BOT  | value                 | 23.250 degree C
+/SYS/PDECB0/T_TOP  | value                 | 23.750 degree C
+/SYS/PDECB1/T_BOT  | value                 | 22.500 degree C
+/SYS/PDECB1/T_TOP  | value                 | 23.000 degree C
+/SYS/PDECB2/T_BOT  | value                 | 19.000 degree C
+/SYS/PDECB2/T_TOP  | value                 | 19.500 degree C
+/SYS/PDECB3/T_BOT  | value                 | 19.250 degree C
+/SYS/PDECB3/T_TOP  | value                 | 19.500 degree C
+/SYS/PDECB4/T_BOT  | value                 | 20.000 degree C
+/SYS/PDECB4/T_TOP  | value                 | 20.250 degree C
+/SYS/PDECB5/T_BOT  | value                 | 20.250 degree C
+/SYS/PDECB5/T_TOP  | value                 | 20.250 degree C
+/SYS/PDECB6/T_BOT  | value                 | 20.000 degree C
+/SYS/PDECB6/T_TOP  | value                 | 20.250 degree C
+/SYS/PDECB7/T_BOT  | value                 | 20.000 degree C
+/SYS/PDECB7/T_TOP  | value                 | 20.250 degree C
+/SYS/PS0/T_AMB     | value                 | 22.250 degree C
+/SYS/PS1/T_AMB     | value                 | 19.750 degree C
+/SYS/PS2/T_AMB     | value                 | 22.000 degree C
+/SYS/PS3/T_AMB     | value                 | 21.750 degree C
+/SYS/PS4/T_AMB     | value                 | 24.000 degree C
+/SYS/PS5/T_AMB     | value                 | 22.250 degree C
+/SYS/SP0/PWR_MGR/  | value                 | 27.969 degree C
+ TEMP              |                       | 
+/SYS/SP0/T_IN      | value                 | 25.750 degree C
+/SYS/SP0/T_OUT     | value                 | 25.500 degree C
+/SYS/SP1/PWR_MGR/  | value                 | 26.687 degree C
+ TEMP              |                       | 
+/SYS/SP1/T_IN      | value                 | 24.000 degree C
+/SYS/SP1/T_OUT     | value                 | 24.250 degree C
+/SYS/T_AMB         | value                 | 22.125 degree C
+/SYS/              | value                 | 36.250 degree C
+ VIRTUAL_EXHAUST   |                       | 
+
+-> show /SP/network -t -l 2 ipaddress ipnetmask ipgateway
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+/SP/network        | ipgateway             | 192.168.3.254
+/SP/network        | ipnetmask             | 255.255.255.0
+/SP/network/       | ipaddress             | 192.168.3.2
+ ACTIVE_SP         |                       | 
+/SP/network/HOST0  | ipaddress             | 0.0.0.0
+/SP/network/SP0    | ipaddress             | 192.168.3.20
+/SP/network/SP1    | ipaddress             | 192.168.3.21
+/SP/network/ipv6   | ipgateway             | ::
+
+-> show /System/Firmware
+
+ /System/Firmware
+    Targets:
+        Other_Firmware
+
+    Properties:
+        system_fw_version = Sun System Firmware 9.10.3 2021/08/13 04:52
+
+    Commands:
+        cd
+        show
+
+-> show /SYS/SERVICE
+
+ /SYS/SERVICE
+    Targets:
+
+    Properties:
+        type = Indicator
+        ipmi_name = SERVICE
+        value = Off
+
+    Commands:
+        cd
+        show
+
+-> show -t -format nowrap /System/Power/Power_Supplies health output_power
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+/System/Power/Power_Supplies/Power_Supply_0 | health                | OK
+/System/Power/Power_Supplies/Power_Supply_0 | output_power          | 177 watts
+/System/Power/Power_Supplies/Power_Supply_1 | health                | OK
+/System/Power/Power_Supplies/Power_Supply_1 | output_power          | 176 watts
+/System/Power/Power_Supplies/Power_Supply_2 | health                | OK
+/System/Power/Power_Supplies/Power_Supply_2 | output_power          | 181 watts
+/System/Power/Power_Supplies/Power_Supply_3 | health                | OK
+/System/Power/Power_Supplies/Power_Supply_3 | output_power          | 276 watts
+/System/Power/Power_Supplies/Power_Supply_4 | health                | OK
+/System/Power/Power_Supplies/Power_Supply_4 | output_power          | 184 watts
+/System/Power/Power_Supplies/Power_Supply_5 | health                | OK
+/System/Power/Power_Supplies/Power_Supply_5 | output_power          | 183 watts
+
+-> show /System health
+
+ /System
+    Properties:
+        health = OK
+
+
+-> show /System health_details
+
+ /System
+    Properties:
+        health_details = -
+
+
+-> show -level all -output table /SP/faultmgmt
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+
+-> show /SP/redundancy status
+
+ /SP/redundancy
+    Properties:
+        status = Active
+
+
+-> show /SYS/T_AMB value
+
+ /SYS/T_AMB
+    Properties:
+        value = 22.125 degree C
+
+
+-> show -level all -output table /SYS/CMIOU0/CM type==Temperature value
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+/SYS/CMIOU0/CM/    | value                 | 32.500 degree C
+ CMP/BOB00/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU0/CM/    | value                 | 33.000 degree C
+ CMP/BOB00/T_B     |                       | 
+/SYS/CMIOU0/CM/    | value                 | 32.500 degree C
+ CMP/BOB01/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU0/CM/    | value                 | 34.750 degree C
+ CMP/BOB01/T_B     |                       | 
+/SYS/CMIOU0/CM/    | value                 | 33.000 degree C
+ CMP/BOB10/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU0/CM/    | value                 | 32.250 degree C
+ CMP/BOB10/T_B     |                       | 
+/SYS/CMIOU0/CM/    | value                 | 32.250 degree C
+ CMP/BOB11/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU0/CM/    | value                 | 34.500 degree C
+ CMP/BOB11/T_B     |                       | 
+/SYS/CMIOU0/CM/    | value                 | 32.750 degree C
+ CMP/BOB20/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU0/CM/    | value                 | 33.250 degree C
+ CMP/BOB20/T_B     |                       | 
+/SYS/CMIOU0/CM/    | value                 | 28.500 degree C
+ CMP/BOB21/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU0/CM/    | value                 | 30.750 degree C
+ CMP/BOB21/T_B     |                       | 
+/SYS/CMIOU0/CM/    | value                 | 32.500 degree C
+ CMP/BOB30/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU0/CM/    | value                 | 31.750 degree C
+ CMP/BOB30/T_B     |                       | 
+/SYS/CMIOU0/CM/    | value                 | 28.250 degree C
+ CMP/BOB31/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU0/CM/    | value                 | 32.000 degree C
+ CMP/BOB31/T_B     |                       | 
+/SYS/CMIOU0/CM/    | value                 | 47.000 degree C
+ CMP/T_INT         |                       | 
+/SYS/CMIOU0/CM/    | value                 | 21.250 degree C
+ T_AMB             |                       | 
+/SYS/CMIOU0/CM/    | value                 | 27.656 degree C
+ VDDR_MIO_OBPS/    |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU0/CM/    | value                 | 32.000 degree C
+ VDDR_OBPS0/T_INT  |                       | 
+/SYS/CMIOU0/CM/    | value                 | 31.719 degree C
+ VDDR_OBPS1/T_INT  |                       | 
+
+-> show -level all -output table /SYS/CMIOU1/CM type==Temperature value
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+/SYS/CMIOU1/CM/    | value                 | 32.250 degree C
+ CMP/BOB00/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU1/CM/    | value                 | 33.750 degree C
+ CMP/BOB00/T_B     |                       | 
+/SYS/CMIOU1/CM/    | value                 | 32.500 degree C
+ CMP/BOB01/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU1/CM/    | value                 | 35.750 degree C
+ CMP/BOB01/T_B     |                       | 
+/SYS/CMIOU1/CM/    | value                 | 32.500 degree C
+ CMP/BOB10/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU1/CM/    | value                 | 32.750 degree C
+ CMP/BOB10/T_B     |                       | 
+/SYS/CMIOU1/CM/    | value                 | 32.000 degree C
+ CMP/BOB11/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU1/CM/    | value                 | 34.750 degree C
+ CMP/BOB11/T_B     |                       | 
+/SYS/CMIOU1/CM/    | value                 | 32.750 degree C
+ CMP/BOB20/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU1/CM/    | value                 | 33.250 degree C
+ CMP/BOB20/T_B     |                       | 
+/SYS/CMIOU1/CM/    | value                 | 29.250 degree C
+ CMP/BOB21/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU1/CM/    | value                 | 30.750 degree C
+ CMP/BOB21/T_B     |                       | 
+/SYS/CMIOU1/CM/    | value                 | 32.500 degree C
+ CMP/BOB30/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU1/CM/    | value                 | 32.750 degree C
+ CMP/BOB30/T_B     |                       | 
+/SYS/CMIOU1/CM/    | value                 | 29.750 degree C
+ CMP/BOB31/CH0/    |                       | 
+ DIMM/T_AMB        |                       | 
+/SYS/CMIOU1/CM/    | value                 | 33.250 degree C
+ CMP/BOB31/T_B     |                       | 
+/SYS/CMIOU1/CM/    | value                 | 42.000 degree C
+ CMP/T_INT         |                       | 
+/SYS/CMIOU1/CM/    | value                 | 22.250 degree C
+ T_AMB             |                       | 
+/SYS/CMIOU1/CM/    | value                 | 29.656 degree C
+ VDDR_MIO_OBPS/    |                       | 
+ T_INT             |                       | 
+/SYS/CMIOU1/CM/    | value                 | 37.312 degree C
+ VDDR_OBPS0/T_INT  |                       | 
+/SYS/CMIOU1/CM/    | value                 | 33.250 degree C
+ VDDR_OBPS1/T_INT  |                       | 
+
+-> show faulty
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+
+-> -------------------------------  End ---------------------
+«öEnterÁäÄ~Äò: 
+[H[2J[7m    sol10u11-x86   100 - Opr. Daily Chk M8-T8 ¾Þ§@§@·~                                    
+[m
+
+[7mOper. Daily Chk M8-T8 / GD ¤Á´«¾Þ§@§@·~ [m
+
+[7m110[m  - XC - M8-8 (iLom) - Check H/W Status.        [7m120[m  - XC - T8-1 (iLom) - Check H/W Status.
+
+[7m130[m  - LT - T8-1 (iLom) - Check H/W Status.        [7m140[m  - For Future.
+
+
+
+
+
+[7m999[m - ¤W¤@­¶
+
+[7m                      
+
+
+«e¤@¨B°Ê§@¡G110 - XC - M8-8 (iLom) - Check H/W Status.
+[mSelection: 120
+½T©w­n¶i¦æ¶Ü? (y/n)? [y] 
+
+------------------------------- Start --------------------
+###########################################
+120 - XC - T8-1 (iLom) - Check H/W Status. 
+###########################################
+spawn ssh oper@192.168.3.3
+T8-1-XC-iLom [256G]
+Chang Xing - Rack: J  / [SN: 1823NN8333 ] 
+Password: 
+
+Oracle(R) Integrated Lights Out Manager
+
+Version 5.0.2.2 r141861
+
+Copyright (c) 2021, Oracle and/or its affiliates. All rights reserved.
+
+T8-1-XC-iLom [256G]
+Chang Xing - Rack: J  / [SN: 1823NN8333 ] 
+
+
+Warning: HTTPS certificate is set to factory default.
+
+Hostname: T8-1-XC-iLom
+
+-> show /SP hostname current_hostname
+
+ /SP
+    Properties:
+        hostname = T8-1-XC-iLom
+        current_hostname = T8-1-XC-iLom
+
+
+-> show /SP/clock
+
+ /SP/clock
+    Targets:
+
+    Properties:
+        datetime = Mon Jun 13 15:02:27 2022
+        timezone = CST (Asia/Taipei)
+        uptime = 178 days, 19:32:48
+        usentpserver = enabled
+
+    Commands:
+        cd
+        set
+        show
+
+-> show -t -l 2 / keyswitch_state
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+/HOST              | keyswitch_state       | Normal
+
+-> show /HOST/diag
+
+ /HOST/diag
+    Targets:
+
+    Properties:
+        default_level = off
+        default_verbosity = normal
+        error_level = off
+        error_verbosity = normal
+        hw_change_level = min
+        hw_change_verbosity = normal
+
+    Commands:
+        cd
+        set
+        show
+
+-> show /HOST status
+
+ /HOST
+    Properties:
+        status = Solaris running
+
+
+-> show /HOST status_detail
+
+ /HOST
+    Properties:
+        status_detail = 20211216 19:54:57: Start Host completed successfully
+
+
+-> show -level all -output table /SYS type==Temperature value
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+/SYS/MB/           | value                 | 44.375 degree C
+ 1V05_IOH_OBPS/    |                       | 
+ T_INT             |                       | 
+/SYS/MB/           | value                 | 37.750 degree C
+ 1V6_IOH_OBPS/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/           | value                 | 35.750 degree C
+ 3V3_MAIN_OBPS/    |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/CMP/    | value                 | 27.000 degree C
+ BOB00/CH0/DIMM/   |                       | 
+ T_AMB             |                       | 
+/SYS/MB/CM/CMP/    | value                 | 27.000 degree C
+ BOB00/CH1/DIMM/   |                       | 
+ T_AMB             |                       | 
+/SYS/MB/CM/CMP/    | value                 | 32.188 degree C
+ BOB00/T_CORE      |                       | 
+/SYS/MB/CM/CMP/    | value                 | 29.000 degree C
+ BOB10/CH0/DIMM/   |                       | 
+ T_AMB             |                       | 
+/SYS/MB/CM/CMP/    | value                 | 28.000 degree C
+ BOB10/CH1/DIMM/   |                       | 
+ T_AMB             |                       | 
+/SYS/MB/CM/CMP/    | value                 | 32.312 degree C
+ BOB10/T_CORE      |                       | 
+/SYS/MB/CM/CMP/    | value                 | 27.000 degree C
+ BOB20/CH0/DIMM/   |                       | 
+ T_AMB             |                       | 
+/SYS/MB/CM/CMP/    | value                 | 28.000 degree C
+ BOB20/CH1/DIMM/   |                       | 
+ T_AMB             |                       | 
+/SYS/MB/CM/CMP/    | value                 | 41.250 degree C
+ BOB20/T_CORE      |                       | 
+/SYS/MB/CM/CMP/    | value                 | 30.000 degree C
+ BOB30/CH0/DIMM/   |                       | 
+ T_AMB             |                       | 
+/SYS/MB/CM/CMP/    | value                 | 29.000 degree C
+ BOB30/CH1/DIMM/   |                       | 
+ T_AMB             |                       | 
+/SYS/MB/CM/CMP/    | value                 | 36.625 degree C
+ BOB30/T_CORE      |                       | 
+/SYS/MB/CM/CMP/    | value                 | 45.000 degree C
+ T_CORE_INT        |                       | 
+/SYS/MB/CM/T_AMB   | value                 | 24.250 degree C
+/SYS/MB/CM/        | value                 | 31.562 degree C
+ T_BUSBAR          |                       | 
+/SYS/MB/CM/T_CORE  | value                 | 39.812 degree C
+/SYS/MB/CM/        | value                 | 35.938 degree C
+ T_INLET           |                       | 
+/SYS/MB/CM/        | value                 | 38.688 degree C
+ VCORE0_OBPS0/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/        | value                 | 36.938 degree C
+ VCORE0_OBPS1/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/        | value                 | 37.625 degree C
+ VCORE0_OBPS2/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/        | value                 | 38.062 degree C
+ VCORE1_OBPS0/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/        | value                 | 37.062 degree C
+ VCORE1_OBPS1/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/        | value                 | 35.750 degree C
+ VCORE1_OBPS2/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/        | value                 | 29.812 degree C
+ VDDR_OBPS/T_INT   |                       | 
+/SYS/MB/CM/        | value                 | 33.250 degree C
+ VDDSOC_OBPS0/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/        | value                 | 35.312 degree C
+ VDDSOC_OBPS1/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/        | value                 | 32.875 degree C
+ VDDSOC_OBPS2/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/        | value                 | 34.250 degree C
+ VDDT_OBPS0/T_INT  |                       | 
+/SYS/MB/CM/        | value                 | 35.938 degree C
+ VDDT_OBPS1/T_INT  |                       | 
+/SYS/MB/CV_TEMP/   | value                 | 45.500 degree C
+ T_AMB             |                       | 
+/SYS/MB/FV_TEMP/   | value                 | 33.500 degree C
+ T_AMB             |                       | 
+/SYS/MB/IOH/T_AMB  | value                 | 37.438 degree C
+/SYS/MB/IOH/       | value                 | 58.397 degree C
+ T_CORE            |                       | 
+/SYS/MB/SAS/T_AMB  | value                 | 31.500 degree C
+/SYS/MB/           | value                 | 36.000 degree C
+ T_0V9_SAS_OBPS    |                       | 
+/SYS/MB/T_OUTLET0  | value                 | 33.000 degree C
+/SYS/MB/T_OUTLET1  | value                 | 31.500 degree C
+/SYS/MB/           | value                 | 37.375 degree C
+ VCORE_IOH_OBPS0/  |                       | 
+ T_INT             |                       | 
+/SYS/MB/           | value                 | 36.625 degree C
+ VCORE_IOH_OBPS1/  |                       | 
+ T_INT             |                       | 
+/SYS/PS0/T_AMB     | value                 | 26.500 degree C
+/SYS/PS1/T_AMB     | value                 | 25.000 degree C
+/SYS/T_AMB         | value                 | 21.250 degree C
+
+-> show /SP/network -t -l 2 ipaddress ipnetmask ipgateway
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+/SP/network        | ipaddress             | 192.168.3.3
+/SP/network        | ipgateway             | 192.168.3.1
+/SP/network        | ipnetmask             | 255.255.255.0
+/SP/network/       | ipaddress             | 169.254.182.76
+ interconnect      |                       | 
+/SP/network/       | ipnetmask             | 255.255.255.0
+ interconnect      |                       | 
+/SP/network/ipv6   | ipgateway             | ::
+
+-> show /System/Firmware
+
+ /System/Firmware
+    Targets:
+        Other_Firmware
+
+    Properties:
+        system_fw_version = Sun System Firmware 9.10.3 2021/08/13 04:41
+
+    Commands:
+        cd
+        show
+
+-> show /SYS/SERVICE
+
+ /SYS/SERVICE
+    Targets:
+
+    Properties:
+        type = Indicator
+        ipmi_name = SERVICE
+        value = Off
+
+    Commands:
+        cd
+        show
+
+-> show -t -format nowrap /System/Power/Power_Supplies health output_power
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+/System/Power/Power_Supplies/Power_Supply_0 | health                | OK
+/System/Power/Power_Supplies/Power_Supply_0 | output_power          | 218 watts
+/System/Power/Power_Supplies/Power_Supply_1 | health                | OK
+/System/Power/Power_Supplies/Power_Supply_1 | output_power          | 210 watts
+
+-> show /System health
+
+ /System
+    Properties:
+        health = OK
+
+
+-> show /System health_details
+
+ /System
+    Properties:
+        health_details = -
+
+
+-> show -level all -output table /SP/faultmgmt
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+
+-> show /SYS/T_AMB value
+
+ /SYS/T_AMB
+    Properties:
+        value = 21.250 degree C
+
+
+-> show faulty
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+
+-> -------------------------------  End ---------------------
+«öEnterÁäÄ~Äò: 
+[H[2J[7m    sol10u11-x86   100 - Opr. Daily Chk M8-T8 ¾Þ§@§@·~                                    
+[m
+
+[7mOper. Daily Chk M8-T8 / GD ¤Á´«¾Þ§@§@·~ [m
+
+[7m110[m  - XC - M8-8 (iLom) - Check H/W Status.        [7m120[m  - XC - T8-1 (iLom) - Check H/W Status.
+
+[7m130[m  - LT - T8-1 (iLom) - Check H/W Status.        [7m140[m  - For Future.
+
+
+
+
+
+[7m999[m - ¤W¤@­¶
+
+[7m                      
+
+
+«e¤@¨B°Ê§@¡G120 - XC - T8-1 (iLom) - Check H/W Status.
+[mSelection: 130
+½T©w­n¶i¦æ¶Ü? (y/n)? [y] 
+
+------------------------------- Start --------------------
+###########################################
+130 - LT - T8-1 (iLom) - Check H/W Status. 
+###########################################
+spawn ssh oper@172.31.100.180
+T8-1-LT-iLom [128G]
+Long Tan - Rack_E  / [SN: 1823NN8330 ] 
+Password: 
+
+Oracle(R) Integrated Lights Out Manager
+
+Version 5.0.2.2 r141861
+
+Copyright (c) 2021, Oracle and/or its affiliates. All rights reserved.
+
+T8-1-LT-iLom [128G]
+Long Tan - Rack_E  / [SN: 1823NN8330 ] 
+
+
+Warning: HTTPS certificate is set to factory default.
+
+Hostname: T8-1-LT-iLom
+
+-> show /SP hostname current_hostname
+
+ /SP
+    Properties:
+        hostname = T8-1-LT-iLom
+        current_hostname = T8-1-LT-iLom
+
+
+-> show /SP/clock
+
+ /SP/clock
+    Targets:
+
+    Properties:
+        datetime = Mon Jun 13 15:05:13 2022
+        timezone = CST (Asia/Taipei)
+        uptime = 145 days, 23:50:49
+        usentpserver = enabled
+
+    Commands:
+        cd
+        set
+        show
+
+-> show -t -l 2 / keyswitch_state
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+/HOST              | keyswitch_state       | Normal
+
+-> show /HOST/diag
+
+ /HOST/diag
+    Targets:
+
+    Properties:
+        default_level = off
+        default_verbosity = normal
+        error_level = max
+        error_verbosity = normal
+        hw_change_level = max
+        hw_change_verbosity = normal
+
+    Commands:
+        cd
+        set
+        show
+
+-> show /HOST status
+
+ /HOST
+    Properties:
+        status = Solaris running
+
+
+-> show /HOST status_detail
+
+ /HOST
+    Properties:
+        status_detail = 20220118 15:53:16: Start Host completed successfully
+
+
+-> show -level all -output table /SYS type==Temperature value
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+/SYS/MB/           | value                 | 42.125 degree C
+ 1V05_IOH_OBPS/    |                       | 
+ T_INT             |                       | 
+/SYS/MB/           | value                 | 36.562 degree C
+ 1V6_IOH_OBPS/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/           | value                 | 34.688 degree C
+ 3V3_MAIN_OBPS/    |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/CMP/    | value                 | 24.000 degree C
+ BOB00/CH0/DIMM/   |                       | 
+ T_AMB             |                       | 
+/SYS/MB/CM/CMP/    | value                 | 24.000 degree C
+ BOB00/CH1/DIMM/   |                       | 
+ T_AMB             |                       | 
+/SYS/MB/CM/CMP/    | value                 | 28.812 degree C
+ BOB00/T_CORE      |                       | 
+/SYS/MB/CM/CMP/    | value                 | 27.000 degree C
+ BOB10/CH0/DIMM/   |                       | 
+ T_AMB             |                       | 
+/SYS/MB/CM/CMP/    | value                 | 26.000 degree C
+ BOB10/CH1/DIMM/   |                       | 
+ T_AMB             |                       | 
+/SYS/MB/CM/CMP/    | value                 | 30.875 degree C
+ BOB10/T_CORE      |                       | 
+/SYS/MB/CM/CMP/    | value                 | 23.000 degree C
+ BOB20/CH0/DIMM/   |                       | 
+ T_AMB             |                       | 
+/SYS/MB/CM/CMP/    | value                 | 23.000 degree C
+ BOB20/CH1/DIMM/   |                       | 
+ T_AMB             |                       | 
+/SYS/MB/CM/CMP/    | value                 | 33.875 degree C
+ BOB20/T_CORE      |                       | 
+/SYS/MB/CM/CMP/    | value                 | 25.000 degree C
+ BOB30/CH0/DIMM/   |                       | 
+ T_AMB             |                       | 
+/SYS/MB/CM/CMP/    | value                 | 24.000 degree C
+ BOB30/CH1/DIMM/   |                       | 
+ T_AMB             |                       | 
+/SYS/MB/CM/CMP/    | value                 | 33.000 degree C
+ BOB30/T_CORE      |                       | 
+/SYS/MB/CM/CMP/    | value                 | 45.000 degree C
+ T_CORE_INT        |                       | 
+/SYS/MB/CM/T_AMB   | value                 | 22.812 degree C
+/SYS/MB/CM/        | value                 | 30.250 degree C
+ T_BUSBAR          |                       | 
+/SYS/MB/CM/T_CORE  | value                 | 39.562 degree C
+/SYS/MB/CM/        | value                 | 34.750 degree C
+ T_INLET           |                       | 
+/SYS/MB/CM/        | value                 | 35.188 degree C
+ VCORE0_OBPS0/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/        | value                 | 36.188 degree C
+ VCORE0_OBPS1/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/        | value                 | 34.250 degree C
+ VCORE0_OBPS2/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/        | value                 | 34.938 degree C
+ VCORE1_OBPS0/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/        | value                 | 36.500 degree C
+ VCORE1_OBPS1/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/        | value                 | 35.562 degree C
+ VCORE1_OBPS2/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/        | value                 | 30.344 degree C
+ VDDR_OBPS/T_INT   |                       | 
+/SYS/MB/CM/        | value                 | 31.125 degree C
+ VDDSOC_OBPS0/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/        | value                 | 32.875 degree C
+ VDDSOC_OBPS1/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/        | value                 | 30.906 degree C
+ VDDSOC_OBPS2/     |                       | 
+ T_INT             |                       | 
+/SYS/MB/CM/        | value                 | 31.438 degree C
+ VDDT_OBPS0/T_INT  |                       | 
+/SYS/MB/CM/        | value                 | 32.625 degree C
+ VDDT_OBPS1/T_INT  |                       | 
+/SYS/MB/CV_TEMP/   | value                 | 41.250 degree C
+ T_AMB             |                       | 
+/SYS/MB/FV_TEMP/   | value                 | 32.250 degree C
+ T_AMB             |                       | 
+/SYS/MB/IOH/T_AMB  | value                 | 35.875 degree C
+/SYS/MB/IOH/       | value                 | 51.982 degree C
+ T_CORE            |                       | 
+/SYS/MB/SAS/T_AMB  | value                 | 30.500 degree C
+/SYS/MB/           | value                 | 35.312 degree C
+ T_0V9_SAS_OBPS    |                       | 
+/SYS/MB/T_OUTLET0  | value                 | 30.750 degree C
+/SYS/MB/T_OUTLET1  | value                 | 30.000 degree C
+/SYS/MB/           | value                 | 36.062 degree C
+ VCORE_IOH_OBPS0/  |                       | 
+ T_INT             |                       | 
+/SYS/MB/           | value                 | 35.062 degree C
+ VCORE_IOH_OBPS1/  |                       | 
+ T_INT             |                       | 
+/SYS/PS0/T_AMB     | value                 | 22.500 degree C
+/SYS/PS1/T_AMB     | value                 | 22.500 degree C
+/SYS/T_AMB         | value                 | 17.000 degree C
+
+-> show /SP/network -t -l 2 ipaddress ipnetmask ipgateway
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+/SP/network        | ipaddress             | 172.31.100.180
+/SP/network        | ipgateway             | 172.31.100.254
+/SP/network        | ipnetmask             | 255.255.255.0
+/SP/network/       | ipaddress             | 169.254.182.76
+ interconnect      |                       | 
+/SP/network/       | ipnetmask             | 255.255.255.0
+ interconnect      |                       | 
+/SP/network/ipv6   | ipgateway             | ::
+
+-> show /System/Firmware
+
+ /System/Firmware
+    Targets:
+        Other_Firmware
+
+    Properties:
+        system_fw_version = Sun System Firmware 9.10.3 2021/08/13 04:41
+
+    Commands:
+        cd
+        show
+
+-> show /SYS/SERVICE
+
+ /SYS/SERVICE
+    Targets:
+
+    Properties:
+        type = Indicator
+        ipmi_name = SERVICE
+        value = Off
+
+    Commands:
+        cd
+        show
+
+-> show -t -format nowrap /System/Power/Power_Supplies health output_power
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+/System/Power/Power_Supplies/Power_Supply_0 | health                | OK
+/System/Power/Power_Supplies/Power_Supply_0 | output_power          | 202 watts
+/System/Power/Power_Supplies/Power_Supply_1 | health                | OK
+/System/Power/Power_Supplies/Power_Supply_1 | output_power          | 219 watts
+
+-> show /System health
+
+ /System
+    Properties:
+        health = OK
+
+
+-> show /System health_details
+
+ /System
+    Properties:
+        health_details = -
+
+
+-> show -level all -output table /SP/faultmgmt
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+
+-> show /SYS/T_AMB value
+
+ /SYS/T_AMB
+    Properties:
+        value = 17.000 degree C
+
+
+-> show faulty
+Target             | Property              | Value                             
+-------------------+-----------------------+-----------------------------------
+
+-> -------------------------------  End ---------------------
+«öEnterÁäÄ~Äò: 
+[H[2J[7m    sol10u11-x86   100 - Opr. Daily Chk M8-T8 ¾Þ§@§@·~                                    
+[m
+
+[7mOper. Daily Chk M8-T8 / GD ¤Á´«¾Þ§@§@·~ [m
+
+[7m110[m  - XC - M8-8 (iLom) - Check H/W Status.        [7m120[m  - XC - T8-1 (iLom) - Check H/W Status.
+
+[7m130[m  - LT - T8-1 (iLom) - Check H/W Status.        [7m140[m  - For Future.
+
+
+
+
+
+[7m999[m - ¤W¤@­¶
+
+[7m                      
+
+
+«e¤@¨B°Ê§@¡G130 - LT - T8-1 (iLom) - Check H/W Status.
+[mSelection: 
